@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='ASCII'?>
+<sdf version='1.7'>
+  <world name='default'>
+    <plugin name='ignition::gazebo::systems::Physics' filename='libignition-gazebo-physics-system.so'/>
+    <plugin name='ignition::gazebo::systems::UserCommands' filename='libignition-gazebo-user-commands-system.so'/>
+    <plugin name='ignition::gazebo::systems::SceneBroadcaster' filename='libignition-gazebo-scene-broadcaster-system.so'/>
+    <plugin name='ignition::gazebo::systems::Imu' filename='ignition-gazebo-imu-system'/>
+    <plugin name='ignition::gazebo::systems::Sensors' filename='ignition-gazebo-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <model name='unit_box'>
+      <pose>0 0 2.5 0 -0 0</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <light name='user_directional_light_0' type='directional'>
+      <pose>0 0 1 0 0 0</pose>
+    </light>
+            <sensor name="color" type="camera">
+                <pose>0 0.0325 0.0125 0 0 0</pose>
+                <update_rate>6</update_rate>
+                <always_on>0</always_on>
+                <camera>
+                    <horizontal_fov>1.20427718</horizontal_fov>
+                    <image>
+                        <width>848</width>
+                        <height>480</height>
+                    </image>
+                    <clip>
+                        <near>0.1</near>
+                        <far>50</far>
+                    </clip>
+                    <lens>
+                        <intrinsics>
+                            <fx>615.9603271484375</fx>
+                            <fy>616.227294921875</fy>
+                            <cx>419.83026123046875</cx>
+                            <cy>245.1431427001953</cy>
+                            <s>0</s>
+                        </intrinsics>
+                    </lens>
+                </camera>
+            </sensor>
+    <include>
+      <uri>
+        https://fuel.ignitionrobotics.org/1.0/MovAi/models/Tugbot
+      </uri>
+      <name>tugbot</name>
+      <pose>13.9 -10.6 0.1 0 0 0</pose>
+    </include>
+  </world>
+</sdf>

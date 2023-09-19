@@ -116,7 +116,7 @@
     </include>
 
     <include>
-      <uri>model://iris_with_ardupilot</uri>
+      <uri>model://r18</uri>
       <pose degrees="true">0 0 0 0 0 90</pose>
     </include>
 
