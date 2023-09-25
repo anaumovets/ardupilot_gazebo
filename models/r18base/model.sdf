@@ -129,14 +129,12 @@
           <specular>0.01 0.01 0.01 1.0</specular>
         </material>
       </visual>
-    </link>
-    <link name="camera_front">
-        <pose relative_to="base_link">0.0553 0 0.4323 0 0 0</pose>
-        <sensor name="color" type="camera">
-            <pose>0 0.0325 0.0125 0 0 0</pose>
+      <sensor name="color" type="camera">
+            <pose degrees="true">0 0 0 0 90 0</pose>
             <update_rate>6</update_rate>
-            <always_on>0</always_on>
+            <always_on>1</always_on>
             <camera>
+                <pose> 0 0 0 0 0 0 </pose>
                 <horizontal_fov>1.20427718</horizontal_fov>
                 <image>
                     <width>848</width>
@@ -144,7 +142,7 @@
                 </image>
                 <clip>
                     <near>0.1</near>
-                    <far>50</far>
+                    <far>1000</far>
                 </clip>
                 <lens>
                     <intrinsics>
@@ -156,33 +154,14 @@
                     </intrinsics>
                 </lens>
             </camera>
+            <visualize>true</visualize>
+            <!-- <plugin name='GstCameraPlugin' filename='libgazebo_gst_camera_plugin.so'>
+            <robotNamespace/>
+            <udpHost>127.0.0.1</udpHost>
+            <udpPort>5600</udpPort>
+            </plugin> -->
         </sensor>
-        <sensor name="depth" type="depth_camera">
-            <pose>0 0.0175 0.0125 0 0 0</pose>
-            <update_rate>6</update_rate>
-            <always_on>0</always_on>
-            <camera>
-                <horizontal_fov>1.51843645</horizontal_fov>
-                <image>
-                    <width>848</width>
-                    <height>480</height>
-                    <format>R_FLOAT32</format>
-                </image>
-                <clip>
-                    <near>0.1</near>
-                    <far>10</far>
-                </clip>
-                <lens>
-                    <intrinsics>
-                        <fx>421.61578369140625</fx>
-                        <fy>421.61578369140625</fy>
-                        <cx>422.2854309082031</cx>
-                        <cy>236.57237243652344</cy>
-                        <s>0</s>
-                    </intrinsics>
-                </lens>
-            </camera>
-        </sensor>
+
     </link>
     <link name='imu_link'>
       <inertial>
