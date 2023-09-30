@@ -155,11 +155,10 @@
                 </lens>
             </camera>
             <visualize>true</visualize>
-            <!-- <plugin name='GstCameraPlugin' filename='libgazebo_gst_camera_plugin.so'>
-            <robotNamespace/>
-            <udpHost>127.0.0.1</udpHost>
-            <udpPort>5600</udpPort>
-            </plugin> -->
+            <plugin filename="gzstreamerPlugin" name="gzstreamer::GzStreamer">
+              <udpHost>127.0.0.1</udpHost>
+              <udpPort>5600</udpPort>
+            </plugin>
         </sensor>
 
     </link>
