@@ -135,9 +135,8 @@
             <always_on>1</always_on>
             <camera>
                 <pose> 0 0 0 0 0 0 </pose>
-                <horizontal_fov>1.20427718</horizontal_fov>
                 <image>
-                    <width>848</width>
+                    <width>640</width>
                     <height>480</height>
                 </image>
                 <clip>
@@ -146,10 +145,10 @@
                 </clip>
                 <lens>
                     <intrinsics>
-                        <fx>615.9603271484375</fx>
-                        <fy>616.227294921875</fy>
-                        <cx>419.83026123046875</cx>
-                        <cy>245.1431427001953</cy>
+                        <fx>197.53</fx>
+                        <fy>197.53</fy>
+                        <cx>320.</cx>
+                        <cy>240.</cy>
                         <s>0</s>
                     </intrinsics>
                 </lens>
